@@ -6,33 +6,33 @@ function Form() {
     function trackChange(event) {
         const updatedUser =
         {...user, [event.target.name]: event.target.value };
-        setUser(updatedUser)
+        setUser(updateUser)
     }
-    function displaySubmit(event) {
+    function changeSubmit(event) {
         event.preventDefault();
         console.log('Username: ', user)
     }
     return(
-        <form onSubmit={displaySubmit}>
+        <form>
             <fieldset>
                 <legend>Here is the Team Form</legend>
                 <div className="form-container">
                     <label htmlFor="username">
                         Name:
                         <div>
-                            <input type="text" name="username" onChange={trackChange}/>
+                            <input type="text" name="name"/>
                         </div>
                     </label>
                     <label htmlFor="email">
                         Email:
                         <div>
-                            <input type="email" name="email" onChange={trackChange} />
+                            <input type="email" name="email" />
                         </div>
                     </label>
                     <label htmlFor="role">
                         Role:
                         <div>
-                            <select type="select" name ="role" onChange={trackChange}>
+                            <select type="select" name ="role">
                                 <option value="front_end_dev">Front End Developer</option>
                                 <option value="back_end_dev">Back End Developer</option>                                
                                 <option value="full_stack_dev">Full Stack Developer</option>                                
@@ -40,7 +40,7 @@ function Form() {
                             </select>
                         </div>
                     </label>
-                    <button type="submit">Submit</button>
+
                 </div>
             </fieldset>
         </form>

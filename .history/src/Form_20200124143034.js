@@ -6,7 +6,7 @@ function Form() {
     function trackChange(event) {
         const updatedUser =
         {...user, [event.target.name]: event.target.value };
-        setUser(updatedUser)
+        setUser(updateUser)
     }
     function displaySubmit(event) {
         event.preventDefault();
